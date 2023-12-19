@@ -50,13 +50,7 @@ jobs:
         run: |
           echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v4
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ matrix.os }}-${{ matrix.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ matrix.os }}-${{ matrix.node-version }}-yarn-
+
 
       - name: Install dependencies and build
         run: |
@@ -110,13 +104,6 @@ jobs:
         run: |
           echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v4
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ matrix.os }}-${{ matrix.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ matrix.os }}-${{ matrix.node-version }}-yarn-
 
       - name: Install dependencies and build
         run: |
