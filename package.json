@@ -1,11 +1,14 @@
 {
-  "name": "price-extractor",
-  "version": "2.1.1",
+  "name": "@parcelsolutions/price-extractor",
+  "version": "3.0.0",
   "description": "Given a price string, extract the price and currency code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
     "node": "18||20"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "test": "npm run lint && npm run test:cover",
@@ -16,8 +19,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PruvoNet/price-extractor.git"
+    "url": "https://github.com/ParcelSolutions/price-extractor.git"
   },
   "keywords": [
     "node",

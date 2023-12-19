@@ -83,7 +83,7 @@ jobs:
         os: [ ubuntu-latest ]
         node-version: [ 10.x ]
     needs: [ test ]
-    if: github.event_name == 'release' && github.event.action == 'published'
+    
     steps:
 
       - name: Checkout
