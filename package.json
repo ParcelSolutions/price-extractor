@@ -1,6 +1,6 @@
 {
   "name": "@parcelsolutions/price-extractor",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Given a price string, extract the price and currency code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
